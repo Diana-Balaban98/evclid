@@ -2,6 +2,7 @@ $( function() {
     $("#accordion") .accordion({
     heightStyle: "content",
     active: true,
-    header: '.accordion-header',
+    header: '> .accordion-item > .accordion-header',
+    collapsible: true,
     });
   });

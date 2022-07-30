@@ -111,25 +111,6 @@ button {
 }
 
 /* accordion */
-.ui-accordion-header-icon::after {
-  position: absolute;
-  right: 0;
-  top: 25px;
-  content: "";
-  width: 50px;
-  height: 50px;
-  background-image: url("../img/pluse.svg");
-  transition: transform 0.3s ease-in-out;
-}
-
-.rotate {
-  transform: rotate(45deg);
-}
-
-.ui-accordion-header-icon:hover::after {
-  background-image: url("../img/pluseorang.svg");
-}
-
 .wrapper__accordion-text {
   height: 100%;
   line-height: 32px;
@@ -170,6 +151,30 @@ html .ui-button.ui-state-disabled:active {
 
 .ui-icon {
   display: none;
+}
+
+#accordion .ui-accordion-header {
+	position: relative;
+}
+
+#accordion .ui-accordion-header-icon {
+	content: '';
+	position: absolute;
+	top: -10px;
+	right: -3px;    
+	display: inline-block;
+  width: 50px;
+  height: 50px;  
+	background: url("../img/pluse.svg") 50% 50% no-repeat;
+  border-radius: 50px;
+  background-color: #ECECEC;
+  transition: all .2s linear;
+}
+
+#accordion .ui-accordion-header-active .ui-accordion-header-icon {
+  transform: rotate(90deg);
+  border: 2px solid #ff9900;
+  transition: .2s;
 }
 
 /* search */
@@ -787,6 +792,7 @@ body {
   margin-left: 4px;
   line-height: 32px;
   color: #cacaca;
+  cursor: pointer;
 }
 
 .footer-evclid__block-3 {
